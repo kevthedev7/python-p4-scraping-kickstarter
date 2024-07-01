@@ -24,7 +24,7 @@ def create_project_dict():
       'description': project.select("p.bbcard_blurb")[0].text,
       'location': project.select("ul.project-meta span.location-name")[0].text,
       'percent_funded': project.select("ul.project-stats li.first.funded strong")[0].text.replace("%","")
-
+    }
   # return the projects dictionary
 
   return projects
